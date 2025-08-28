@@ -1,0 +1,22 @@
+css
+:root { --bg:#0f172a; --card:#111827; --muted:#94a3b8; --acc:#22c55e; --danger:#ef4444; }
+*{ box-sizing: border-box; }
+body{ margin:0; font-family: ui-sans-serif, system-ui; background:var(--bg); color:white; }
+.container{ max-width:1000px; margin:0 auto; padding:24px; }
+.card{ background:var(--card); border-radius:16px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,.25); }
+.h{ font-size:28px; font-weight:700; margin:0 0 12px; }
+.row{ display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.input, .btn, select, textarea{ background:#0b1220; color:white; border:1px solid #243045; border-radius:12px; padding:10px 12px; }
+.btn{ cursor:pointer; }
+.btn.primary{ background:var(--acc); border-color:transparent; color:black; font-weight:700; }
+.btn.danger{ background:var(--danger); border-color:transparent; }
+.badge{ background:#0b1220; padding:6px 10px; border-radius:999px; font-size:12px; border:1px solid #1f2937; }
+.grid{ display:grid; gap:12px; }
+.options{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:10px; }
+.option{ border:1px solid #1f2937; padding:12px; border-radius:12px; cursor:pointer; }
+.option.active{ outline:2px solid var(--acc); }
+.flex-between{ display:flex; justify-content:space-between; align-items:center; }
+.small{ color:var(--muted); font-size:12px; }
+hr{ border:0; border-top:1px solid #1f2937; margin:16px 0; }
+.kicker{ font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.12em; }
+.chat{ position:fixed; bottom:16px; right:16px; }
