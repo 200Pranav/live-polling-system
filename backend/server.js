@@ -8,8 +8,16 @@ import { Server } from 'socket.io';
 import { PollManager } from './pollManager.js';
 import { StudentRegistry } from './studentRegistry.js';
 import { ChatManager } from './chatManager.js';
-
+import mongoose from 'mongoose';
 dotenv.config();
+
+// Add this code to connect to your database
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('DB connected successfully!'))
+  .catch(err => {
+    console.error('DB connection error:', err);
+    process.exit(1); // Crucially, exit with an error code to signal failure
+  });
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
