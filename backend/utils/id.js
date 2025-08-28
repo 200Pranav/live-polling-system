@@ -1,0 +1,1 @@
+export const nid = (prefix = "id") => `${prefix}_${Math.random().toString(36).slice(2, 10)}`;
